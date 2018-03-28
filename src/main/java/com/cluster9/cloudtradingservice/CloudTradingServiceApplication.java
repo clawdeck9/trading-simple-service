@@ -9,7 +9,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 import org.springframework.data.rest.webmvc.config.RepositoryRestConfigurerAdapter;
-import org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration;
+// import org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration;
 
 import com.cluster9.cloudtradingservice.dao.CompanyRepo;
 import com.cluster9.cloudtradingservice.entities.Company;
@@ -28,7 +28,8 @@ public class CloudTradingServiceApplication {
 	}
 }
 
-// config class for repos
+// config class for repository:  expose the Id in the json data sent to the browser, default is no ids
+// Convenience adapter for RepositoryRestConfigurer to allow selective override of configuration methods
 @Configuration
 class CoRepoConfig extends RepositoryRestConfigurerAdapter{
 	@Override
