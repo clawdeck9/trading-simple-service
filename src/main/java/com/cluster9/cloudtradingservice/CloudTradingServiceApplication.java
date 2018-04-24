@@ -5,6 +5,7 @@ import java.util.stream.Stream;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
@@ -13,7 +14,7 @@ import org.springframework.data.rest.webmvc.config.RepositoryRestConfigurerAdapt
 
 import com.cluster9.cloudtradingservice.dao.CompanyRepo;
 import com.cluster9.cloudtradingservice.entities.Company;
-
+@EnableEurekaClient
 @SpringBootApplication
 public class CloudTradingServiceApplication {
 

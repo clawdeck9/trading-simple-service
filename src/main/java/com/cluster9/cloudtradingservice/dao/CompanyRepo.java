@@ -8,7 +8,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 import com.cluster9.cloudtradingservice.entities.Company;
-@RepositoryRestResource
+@RepositoryRestResource // seems both the rest controllers work fine without this annotation
 public interface CompanyRepo extends JpaRepository<Company, Long>{
 	
 	@Query("select c from Company c where c.companyName like :kw")
